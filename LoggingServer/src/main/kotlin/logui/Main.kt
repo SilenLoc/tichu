@@ -21,8 +21,6 @@ class LogApplication : Application() {
     stage.scene = scene
     stage.show()
 
-    MainView.appendText("Here logs should apper")
-
   }
 
   private fun uiStartUp(): Parent = MainView()
