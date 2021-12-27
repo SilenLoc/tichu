@@ -11,22 +11,24 @@ import org.http4k.server.Undertow
 import org.http4k.server.asServer
 
 fun main() {
-  println("Starting Server...")
+  LoggingService.source = "Server"
+
+  LoggingService.log("starting server...")
 
 
   val app: HttpHandler = routes(
     "/some" bind Method.GET to {
+      val queryResult = it.query("value")
 
-      println("getting request...")
+      LoggingService.log("Client sent: $queryResult")
 
-      LoggingService.log("got a request from: ${it.source}")
-
-
-      Response(OK).body("some nice response to POST ${it.query("value")}")
+      Response(OK).body("some nice response to GET $queryResult")
     }
   )
 
-  app.asServer(Undertow(9000)).start()
+  val server = app.asServer(Undertow(9000)).start()
+
+  LoggingService.log("server started at port: ${server.port()}")
 
 
 

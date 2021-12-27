@@ -10,7 +10,7 @@ fun main() {
 
   val client = ApacheClient()
 
-  val request2 = Request(Method.GET, "http://localhost:9000/some").query("value", "someValue")
+  val request2 = Request(Method.GET, "http://localhost:9000/some").query("value", "hey")
 
 
 
