@@ -1,0 +1,31 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.6.10'
+    id 'java'
+}
+
+version '16'
+
+repositories {
+    mavenCentral()
+    mavenCentral()
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib"
+
+    implementation group: "org.http4k", name: "http4k-core", version: "4.17.6.0"
+    implementation group: "org.http4k", name: "http4k-server-jetty", version: "4.17.6.0"
+    implementation group: "org.http4k", name: "http4k-client-okhttp", version: "4.17.6.0"
+    implementation platform("org.http4k:http4k-bom:4.17.6.0")
+
+    implementation "org.http4k:http4k-server-undertow"
+
+    implementation "org.http4k:http4k-client-apache"
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.2'
+}
+
+test {
+    useJUnitPlatform()
+}
