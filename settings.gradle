@@ -3,3 +3,6 @@ include 'Server'
 include 'Client'
 include 'LoggingServer'
 include 'LoggingClient'
+include 'httpshare'
+include 'Dto'
+

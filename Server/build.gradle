@@ -12,6 +12,8 @@ repositories {
 dependencies {
 
     implementation project(':LoggingClient')
+    implementation project(':httpshare')
+    implementation project(':Dto')
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib"
 
@@ -19,6 +21,8 @@ dependencies {
     implementation group: "org.http4k", name: "http4k-server-jetty", version: "4.17.6.0"
     implementation group: "org.http4k", name: "http4k-client-okhttp", version: "4.17.6.0"
     implementation platform("org.http4k:http4k-bom:4.17.6.0")
+
+
 
     implementation "org.http4k:http4k-server-undertow"
 

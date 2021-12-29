@@ -10,9 +10,11 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/Client" />
+            <option value="$PROJECT_DIR$/Dto" />
             <option value="$PROJECT_DIR$/LoggingClient" />
             <option value="$PROJECT_DIR$/LoggingServer" />
             <option value="$PROJECT_DIR$/Server" />
+            <option value="$PROJECT_DIR$/httpshare" />
           </set>
         </option>
       </GradleProjectSettings>

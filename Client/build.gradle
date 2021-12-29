@@ -1,5 +1,5 @@
 plugins {
-    id 'org.jetbrains.kotlin.jvm' version '1.5.10'
+    id 'org.jetbrains.kotlin.jvm' version '1.6.10'
     id 'java'
 }
 
@@ -13,6 +13,8 @@ repositories {
 dependencies {
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib"
+    implementation project(':httpshare')
+    implementation project(':Dto')
 
     implementation group: "org.http4k", name: "http4k-core", version: "4.17.6.0"
     implementation group: "org.http4k", name: "http4k-server-jetty", version: "4.17.6.0"
