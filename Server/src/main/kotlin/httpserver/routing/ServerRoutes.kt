@@ -5,6 +5,7 @@ import org.http4k.core.Response
 import org.http4k.core.Status
 import org.http4k.routing.bind
 import org.http4k.routing.routes
+import services.UserService
 
 object ServerRoutes {
 
@@ -16,6 +17,16 @@ object ServerRoutes {
 
       Response(Status.OK).body("some nice response to GET $queryResult")
     },
+    Routes.postUser bind Method.POST to {
+
+      LoggingService.log("Client sent: ${it.bodyString()}")
+
+      UserService.addUser(UserService.resolveJson(it.bodyString()))
+
+
+
+      Response(Status.OK)
+    }
 
   )
 
