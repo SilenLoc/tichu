@@ -6,6 +6,7 @@ object Routes {
 
 
   val postUser = "/user"
+  val getUsers = "/users"
 
 
 }

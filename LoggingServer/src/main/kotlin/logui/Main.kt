@@ -28,7 +28,7 @@ class LogApplication : Application() {
 }
 
 fun main()  {
-  LogCentral.defineLogConsumer { input -> MainView.appendText(input) }
+  LogCentral.defineLogConsumer { input, source -> MainView.appendText(input, source) }
 
   Server.startup()
 

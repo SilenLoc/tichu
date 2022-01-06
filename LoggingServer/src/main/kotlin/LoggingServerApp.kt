@@ -7,7 +7,8 @@ import serverhttp.serverstartup.Server
 fun main() {
 
 
-  LogCentral.defineLogConsumer { log: String -> Log.info("Log: $log")}
+  LogCentral.defineLogConsumer { log: String, _: String -> Log.info("Log: $log")}
+
 
   Server.startup()
 

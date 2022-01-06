@@ -12,7 +12,6 @@ object Server {
 
     LoggingService.log("starting server...")
 
-
     val app: HttpHandler = ServerRoutes.routes
 
     val server = app.asServer(Undertow(9000)).start()

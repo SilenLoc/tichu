@@ -6,7 +6,7 @@ object LoggingService {
 
   var source: String = "undefined"
 
-  private const val preFix: String = "From source: "
+  private const val preFix: String = "$: "
 
   private const val preLog: String = " [ "
 
@@ -20,7 +20,7 @@ object LoggingService {
     val request = Request(Method.GET, "http://localhost:9090/log")
       .query(
         "inlog",
-        preFix + source + preLog + log + suLog)
+        preFix + preLog + log + suLog).query("source", source)
 
     println(client(request))
 

@@ -8,13 +8,14 @@ import serverhttp.requesthandeling.Responses
 
 object Routes {
 
-  val logRoutes = routes("/log" bind Method.GET to {
+    val logRoutes = routes("/log" bind Method.GET to {
+        val log = it.query("inlog") ?: "wrong input"
+        val source = it.query("source") ?: "unknownSource"
 
-    Actions.printLog(it.query("inlog") ?: "wrong input")
+        Actions.printLog(log, source)
 
-    Responses.OK()
-  })
-
+        Responses.OK()
+    })
 
 
 }

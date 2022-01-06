@@ -8,20 +8,39 @@ import kotlinx.serialization.json.Json
 
 @Serializable
 data class UserJson(
-  val name: String
+    val name: String,
+    val id: String? = null
 )
 
-object UserJsonResolver{
-  val json = Json{}
-  fun resolveFromString(jsonString: String): UserJson {
+@Serializable
+data class UsersJson(
+    val users: Set<UserJson>
+)
 
-    return json.decodeFromString<UserJson>(jsonString)
-  }
 
-  fun toJson(user: UserJson) :String {
-    val json = Json{}
-    return json.encodeToString(user)
-  }
+object UsersJsonResolver {
+    val json = Json { }
+
+    fun resolveFromJson(jsonString: String): UsersJson {
+      return json.decodeFromString(jsonString)
+    }
+
+    fun toJson(user: UsersJson): String{
+      return json.encodeToString(user)
+    }
+}
+
+object UserJsonResolver {
+    val json = Json {}
+
+    fun resolveFromString(jsonString: String): UserJson {
+        return json.decodeFromString(jsonString)
+    }
+
+    fun toJson(user: UserJson): String {
+        val json = Json {}
+        return json.encodeToString(user)
+    }
 
 }
 

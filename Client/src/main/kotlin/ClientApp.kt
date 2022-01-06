@@ -10,17 +10,28 @@ import representations.user.UserJsonResolver
 fun main() {
   println("Starting Client...")
 
+  val serverAdress = "http://localhost:9000"
+
+  LoggingService.source = "Test Client"
+
+  LoggingService.log("Test Client Started")
+
   val client = ApacheClient()
 
-  val request2 = Request(Method.GET, "http://localhost:9000${Routes.ping}").query(Routes.pingQuery, "hey")
+  val request2 = Request(Method.GET, serverAdress + Routes.ping).query(Routes.pingQuery, "hey")
 
   val userJsonString = UserJsonResolver.toJson(UserJson("test Name"))
 
-  val request3 = Request(Method.POST, "http://localhost:9000${Routes.postUser}").body(userJsonString)
+  val request3 = Request(Method.POST, serverAdress + Routes.postUser).body(userJsonString)
+
+  val request4 = Request(Method.GET,serverAdress + Routes.getUsers )
+
+
 
 
   println(client(request2))
   println(client(request3))
+  println(client(request4))
 
 
 }
