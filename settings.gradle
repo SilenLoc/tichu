@@ -5,4 +5,5 @@ include 'LoggingServer'
 include 'LoggingClient'
 include 'httpshare'
 include 'Dto'
+include 'Core'
 
