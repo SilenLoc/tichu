@@ -8,17 +8,16 @@ import representations.user.UsersJson
 
 object UserService {
 
-  private val users = mutableMapOf<String,User>()
-
-
+  private val users = mutableMapOf<String, User>()
 
 
   fun addUser(user: User) {
-    if(user.id != null) {
+    if (user.id != null) {
       users[user.id] = user
       LoggingService.log("New UserList: $users")
+    } else {
+      LoggingService.log("no user added")
     }
-    LoggingService.log("no user added")
   }
 
 
@@ -36,7 +35,10 @@ object UserService {
   fun usersToJsonUsers() =
     UsersJson(
       users.values.map {
-        UserJson(it.name,
-          it.id) }.toSet()
+        UserJson(
+          it.name,
+          it.id
+        )
+      }.toSet()
     )
 }

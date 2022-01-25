@@ -8,6 +8,12 @@ import representations.user.UserJsonResolver
 
 
 fun main() {
+ launchClientWithCLI()
+
+}
+
+
+fun launchClientWithCLI(){
   println("Starting Client...")
 
   val serverAdress = "http://localhost:9000"
@@ -20,7 +26,7 @@ fun main() {
 
   val request2 = Request(Method.GET, serverAdress + Routes.ping).query(Routes.pingQuery, "hey")
 
-  val userJsonString = UserJsonResolver.toJson(UserJson("test Name"))
+  val userJsonString = UserJsonResolver.toJson(UserJson("test rrr Name"))
 
   val request3 = Request(Method.POST, serverAdress + Routes.postUser).body(userJsonString)
 
@@ -32,6 +38,4 @@ fun main() {
   println(client(request2))
   println(client(request3))
   println(client(request4))
-
-
 }

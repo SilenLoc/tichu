@@ -6,4 +6,7 @@ include 'LoggingClient'
 include 'httpshare'
 include 'Dto'
 include 'Core'
+include 'EasyStartUp'
+include 'WhoWins'
+include 'Cards'
 

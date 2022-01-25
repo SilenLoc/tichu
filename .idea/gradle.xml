@@ -9,12 +9,15 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/Cards" />
             <option value="$PROJECT_DIR$/Client" />
             <option value="$PROJECT_DIR$/Core" />
             <option value="$PROJECT_DIR$/Dto" />
+            <option value="$PROJECT_DIR$/EasyStartUp" />
             <option value="$PROJECT_DIR$/LoggingClient" />
             <option value="$PROJECT_DIR$/LoggingServer" />
             <option value="$PROJECT_DIR$/Server" />
+            <option value="$PROJECT_DIR$/WhoWins" />
             <option value="$PROJECT_DIR$/httpshare" />
           </set>
         </option>

@@ -1,8 +1,8 @@
-
-
 import httpserver.serverstartup.Server
 
 fun main() {
-  Server.start()
-
+  launchServerWithCLI()
 }
+
+
+fun launchServerWithCLI() = Server.start()

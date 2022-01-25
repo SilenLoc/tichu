@@ -1,1 +1,1 @@
-C:\repo\tichu\LoggingClient\build\classes\kotlin\main\LoggingService.class
+C:\tichuarep\LoggingClient\build\classes\kotlin\main\LoggingService.class
