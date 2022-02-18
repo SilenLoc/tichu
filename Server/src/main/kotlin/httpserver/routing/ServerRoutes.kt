@@ -1,12 +1,13 @@
 package httpserver.routing
 
+import LoggingService
+import Routes
 import org.http4k.core.Method
 import org.http4k.core.Request
 import org.http4k.core.Response
 import org.http4k.core.Status
 import org.http4k.routing.bind
 import org.http4k.routing.routes
-import representations.user.UserJsonResolver
 import representations.user.UsersJsonResolver
 import services.UserService
 
@@ -33,6 +34,10 @@ object ServerRoutes {
       log(it)
 
       Response(Status.OK).body(UsersJsonResolver.toJson(UserService.usersToJsonUsers()))
+    },
+    Routes.validateCards bind Method.POST to {
+
+      Response(Status.OK)
     }
 
 
