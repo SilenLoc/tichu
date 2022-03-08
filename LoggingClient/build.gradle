@@ -11,19 +11,19 @@ repositories {
 }
 
 dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib"
+    implementation supportDependencies.kotlinStd
+    implementation supportDependencies.staticlog
 
-    implementation group: "org.http4k", name: "http4k-core", version: "4.17.6.0"
-    implementation group: "org.http4k", name: "http4k-server-jetty", version: "4.17.6.0"
-    implementation group: "org.http4k", name: "http4k-client-okhttp", version: "4.17.6.0"
-    implementation platform("org.http4k:http4k-bom:4.17.6.0")
+    implementation supportDependencies.http4KCore
+    implementation supportDependencies.http4KJetty
+    implementation supportDependencies.http4KOkHttp
+    implementation platform(supportDependencies.http4KPlatform)
 
-    implementation "org.http4k:http4k-server-undertow"
+    implementation supportDependencies.http4KUndertow
 
-    implementation "org.http4k:http4k-client-apache"
+    implementation supportDependencies.clientHttp4k
 
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.2'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.2'
+    testImplementation supportDependencies.jupiter
 }
 
 test {
