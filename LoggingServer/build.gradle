@@ -24,7 +24,7 @@ dependencies {
     implementation 'io.github.jupf.staticlog:staticlog-java:2.2.0'
 
 
-    implementation group: "org.http4k", name: "http4k-core", version: "4.17.6.0"
+    implementation group: "org.http4k", name: "http4k-core", version: "4.20.1.0"
     implementation group: "org.http4k", name: "http4k-server-jetty", version: "4.17.6.0"
     implementation group: "org.http4k", name: "http4k-client-okhttp", version: "4.17.6.0"
     implementation platform("org.http4k:http4k-bom:4.17.6.0")
