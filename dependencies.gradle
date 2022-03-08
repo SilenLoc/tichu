@@ -3,13 +3,27 @@ ext {
     fxPluginVersion = "17"
     fxModules = ['javafx.controls']
 
-    jupiter = "5.8.1"
+    jupiterVersion = "5.8.1"
 
+    http4kCoreVersion =  "4.17.6.0"
+
+    staticlogVersion = "2.2.0"
 
     supportDependencies = [
 
-            jupiter  : "org.junit.jupiter:junit-jupiter-api:$jupiter",
-            kotlinStd: "org.jetbrains.kotlin:kotlin-stdlib"
+            jupiter  : "org.junit.jupiter:junit-jupiter-api:$jupiterVersion",
+
+            kotlinStd: "org.jetbrains.kotlin:kotlin-stdlib",
+
+            http4KCore: "org.http4k:http4k-core:$http4kCoreVersion",
+            http4KJetty: "org.http4k:http4k-server-jetty:$http4kCoreVersion",
+            http4KOkHttp: "org.http4k:http4k-client-okhttp:$http4kCoreVersion",
+            http4KPlatform: "org.http4k:http4k-bom:4.17.6.0",
+            http4KUndertow: "org.http4k:http4k-server-undertow",
+
+            clientHttp4k: "org.http4k:http4k-client-apache",
+
+            staticlog: "io.github.jupf.staticlog:staticlog-java:$staticlogVersion"
 
 
     ]
