@@ -5,7 +5,7 @@ ext {
 
     jupiterVersion = "5.8.1"
 
-    http4kCoreVersion =  "4.17.6.0"
+    http4kCoreVersion =  "4.16.6.0"
 
     staticlogVersion = "2.2.0"
 
