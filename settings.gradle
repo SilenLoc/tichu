@@ -9,4 +9,5 @@ include 'Core'
 include 'Cards'
 include 'Bot'
 include 'Share'
+include 'frontview'
 

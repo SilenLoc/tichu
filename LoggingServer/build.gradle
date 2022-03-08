@@ -7,8 +7,8 @@ plugins {
 }
 
 javafx {
-    version = "17"
-    modules = [ 'javafx.controls' ]
+    version = fxPluginVersion
+    modules = fxModules
 }
 
 version 'unspecified'
@@ -19,10 +19,10 @@ repositories {
 }
 
 dependencies {
+
+
     implementation "org.jetbrains.kotlin:kotlin-stdlib"
-
     implementation 'io.github.jupf.staticlog:staticlog-java:2.2.0'
-
 
     implementation group: "org.http4k", name: "http4k-core", version: "4.17.6.0"
     implementation group: "org.http4k", name: "http4k-server-jetty", version: "4.17.6.0"
@@ -35,8 +35,8 @@ dependencies {
 
 
 
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.2'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.2'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
 }
 
 test {

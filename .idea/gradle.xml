@@ -18,6 +18,7 @@
             <option value="$PROJECT_DIR$/LoggingServer" />
             <option value="$PROJECT_DIR$/Server" />
             <option value="$PROJECT_DIR$/Share" />
+            <option value="$PROJECT_DIR$/frontview" />
             <option value="$PROJECT_DIR$/httpshare" />
           </set>
         </option>

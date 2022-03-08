@@ -1,0 +1,18 @@
+ext {
+
+    fxPluginVersion = "17"
+    fxModules = ['javafx.controls']
+
+    jupiter = "5.8.1"
+
+
+    supportDependencies = [
+
+            jupiter  : "org.junit.jupiter:junit-jupiter-api:$jupiter",
+            kotlinStd: "org.jetbrains.kotlin:kotlin-stdlib"
+
+
+    ]
+
+
+}

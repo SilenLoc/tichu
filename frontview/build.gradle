@@ -1,0 +1,32 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.6.10'
+    id 'java'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.10'
+}
+
+javafx {
+    version = fxPluginVersion
+    modules = fxModules
+}
+
+version 'unspecified'
+
+repositories {
+    mavenCentral()
+    mavenCentral()
+}
+
+dependencies {
+
+    implementation project(':LoggingClient')
+
+    implementation supportDependencies.kotlinStd
+
+
+    testImplementation supportDependencies.jupiter
+}
+
+test {
+    useJUnitPlatform()
+}
