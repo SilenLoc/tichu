@@ -3,7 +3,7 @@ ext {
     fxPluginVersion = "17"
     fxModules = ['javafx.controls']
 
-    jupiterVersion = "5.8.1"
+    jupiterVersion = "5.8.2"
 
     http4kCoreVersion =  "4.20.1.0"
 
