@@ -4,5 +4,5 @@
   "assignees": ["SilenLoc"],
   "semanticCommitScope": "deps",
   "automergeType": "pr",
-  "prCreation": "immediate",
+  "prCreation": "immediate"
 }
