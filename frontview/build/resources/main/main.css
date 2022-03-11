@@ -1,0 +1,9 @@
+#handview{
+    -fx-border-color: blue ;
+    -fx-border-width: 1 ;
+}
+
+#cardholder{
+    -fx-width: 80px;
+    -fx-height: 160px;
+}
