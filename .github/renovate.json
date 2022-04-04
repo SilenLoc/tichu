@@ -5,5 +5,5 @@
   "semanticCommitScope": "deps",
   "automergeType": "pr",
   "prCreation": "immediate",
-  "prHourlyLimit":0
+  "prHourlyLimit":100
 }
