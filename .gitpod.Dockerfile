@@ -1,4 +1,4 @@
-FROM gitpod/workspace-full-vnc@sha256:7e800c350e80b565ebc895b6d69458056c40b5d79de9700a30b361656b5c4219
+FROM gitpod/workspace-full-vnc@sha256:7b8cf2e855e5a1848a7776a8030bda015c289299107b9dc9d8c664c1f47c89e3
 
 RUN apt-get update \
     && apt-get install -y openjfx libopenjfx-java matchbox \
