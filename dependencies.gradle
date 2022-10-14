@@ -9,7 +9,7 @@ ext {
 
     staticlogVersion = "2.2.0"
 
-    kotlinxVersion = "1.4.0"
+    kotlinxVersion = "1.4.1"
 
     supportDependencies = [
 
