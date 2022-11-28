@@ -1,7 +1,7 @@
 plugins {
-    id 'org.jetbrains.kotlin.jvm' version '1.7.21'
+    id 'org.jetbrains.kotlin.jvm' version '1.7.22'
     id 'java'
-    id 'org.jetbrains.kotlin.plugin.serialization' version '1.7.21'
+    id 'org.jetbrains.kotlin.plugin.serialization' version '1.7.22'
 }
 
 version 'unspecified'
